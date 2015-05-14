@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+#mainview {
+	font-size: 30px;
+}
+#minimap {
+	font-size: 5px;
+}
+.sheet {
+	position: absolute;
+	left: 10em;
+	top: 10em;
+	width: 10em;
+	height: 10em;
+	border: 0.1em solid #000;
+}
+.circle {
+	position: absolute;
+	left: 3em;
+	top: 5em;
+	width: 3em;
+	height: 3em;
+	border: 0.3em solid #f00;
+	-moz-border-radius: 3em;
+	-webkit-border-radius: 3em;
+	border-radius: 3em;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 3em;
+	background-color: #ddf;
+}
+.line {
+	position: absolute;
+	width: 0.3em;
+	height: 0.3em;
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
+	border-radius: 1em;
+	background-color: #dd5;
+	z-index: -1;
+}
+</style>
+</head>
+<body>
+<div id="minimap"><div class="canvas">This text is a test.  Do not panic
+<div class="circle">Hi</div><div class="line" style="width: 3em"></div>
+</div></div>
+
+<div id="mainview"><div class="canvas">OK, now panic.
+<div class="circle">Hello</div><div class="line" style="width: 3em; left: 2em; top: 8em"></div>
+</div></div>
+
+</body>
+</html>

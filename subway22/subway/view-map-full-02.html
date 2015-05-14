@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>LEX Prototype</title>
+    <!-- Bootstrap -->
+    <link href="theme/bootstrap.css" rel="stylesheet">
+    <!-- App CSS -->
+    <link href="theme/lex-app.css" rel="stylesheet">
+    <link href="theme/subway.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body class="map">
+
+    <nav class="navbar lex-hdr">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">
+                    <img src="theme/img/header-ms-logo.png" alt="">
+                </a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Views <span class="caret"></span></a>
+                        <ul class="dropdown-menu pull-right" role="menu">
+                            <li><a href="/">Marketing Site</a></li>
+                            <li><a href="view-map-full.html">View: Full Map A</a></li>
+                            <li><a href="view-map-full-02.html">View: Full Map B</a></li>
+                            <li><a href="view-map-full-force.html">View: Full Map - Force</a></li>
+                            <li><a href="view-map-full-concept-01.html">View: Full Map - Visual Design A</a></li>
+                            <li><a href="view-map-full-concept-02.html">View: Full Map - Visual Design B</a></li>
+                            <li><a href="view-map-full-concept-03.html">View: Full Map - Visual Design C</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#lexModal">Modal: Stop Preview</a></li>
+                            <li><a href="view-stop-detail.html">View: Stop Detail</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="view-pg-notes.html">Notes</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    <div class="hdr-border"></div>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+
+                <h1 class="pg-title">Explore LEX Curriculum</h1>
+
+                <div class="filter-wrap">
+                    <form>
+                        <div id="fields-wrapper" class="fields-wrap">
+                            <ul class="xl-block-grid-6 lg-block-grid-4 md-block-grid-4 sm-block-grid-3 xs-block-grid-1">
+                                <li>
+                                    <div class="form-group">
+                                        <label for="">Skills Path</label>
+                                        <select name="" id="" class="form-control input-sm">
+                                            <option value="">All</option>
+                                            <option value="">Server</option>
+                                            <option value="">Desktop</option>
+                                            <option value="">Applications</option>
+                                            <option value="">Database</option>
+                                            <option value="">Developer</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-group">
+                                        <label for="">Track</label>
+                                        <select name="" id="" class="form-control input-sm">
+                                            <option value="Option">Option</option>
+                                            <option value="Option">Option</option>
+                                            <option value="Option">Option</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-group">
+                                        <label for="">Badge</label>
+                                        <select name="" id="" class="form-control input-sm">
+                                            <option value="Option">Option</option>
+                                            <option value="Option">Option</option>
+                                            <option value="Option">Option</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-group">
+                                        <label for="">Certification</label>
+                                        <select name="" id="" class="form-control input-sm">
+                                            <option value="Option">Option</option>
+                                            <option value="Option">Option</option>
+                                            <option value="Option">Option</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-group">
+                                        <label for="">Language</label>
+                                        <select name="" id="" class="form-control input-sm">
+                                            <option value="Other">Other</option>
+                                            <option value="Other">Other</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-group">
+                                        <label for="">Keyword</label>
+                                        <input type="text" class="form-control input-sm" id="" placeholder="">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <button type="button" class="btn btn-default btn-sm hidden-xl" id="more-options" data-text-swap="- Less Options">+ More<span class="hidden-xs"> Options</span></button>
+                            </div>
+                            <div class="col-xs-6">
+                                <button type="button" class="btn btn-primary btn-sm pull-right"><i class="glyphicon glyphicon-filter"></i> Filter<span class="hidden-xs"> Chart</span></button>
+                            </div>
+                        </div>
+                    </form>
+                </div> <!-- /.filter-wrap -->
+
+                <div class="map-canvas">
+                    <div id="tip"></div>
+                    <div id="mainview"><div class="canvas"></div></div>
+                    <script src="js/raphael.js"></script>
+                    <script>
+
+                        var input_graph = {
+                            "nodes": [
+                              { "name": "D1", "description": "Applies language syntax and tools to achieve a functional requirement", "group": "Programming", "type": "stop", "fixed": true, "x": 40, "y": 40, "line_color": "#f00", "fill_color": "#fee", "stroke_color": "#000" },
+                              { "name": "D2", "description": "Develops code to access and manage local and network data sources", "group": "Programming", "type": "stop" },
+                              { "name": "D3", "description": "Recognizes and implements program flow patterns", "group": "Programming", "type": "stop" },
+                              { "name": "D4", "description": "Debugs code and develops appropriate exception handling prior to code check-in", "group": "Programming", "type": "stop" },
+                              { "name": "D5", "description": "Recognizes and applies a specified design pattern", "group": "Programming", "type": "stop" },
+                              { "name": "D6", "description": "Develops code that satisfies the specified architecture and performance requirements", "group": "Programming", "type": "stop" },
+                              { "name": "D7", "description": "Bronze Badge", "group": "Programming", "type": "badge", "label": "Programming Technology Specialist", "fixed": true, "x": 840, "y": 420, "line_color": "#00f", "fill_color": "#ff0", "stroke_color": "#4f5" },
+                              { "name": "W1", "description": "Develops the UI design specifications for a Web app", "group": "Web App", "type": "stop", "fixed": true, "x": 60, "y": 220 },
+                              { "name": "W2", "description": "Develops an adaptive Web app layout using native HTML/CSS tools to achieve the specified UX Design", "group": "Web App", "type": "stop" },
+                              { "name": "W3", "description": "Develops an adaptive Web app layout using server-side tools to achieve the specified UX Design", "group": "Web App", "type": "stop" },
+                              { "name": "W4", "description": "Develops client-side code and integrates JS library components to achieve the specified UX Design", "group": "Web App", "type": "stop" },
+                              { "name": "W5", "description": "Develops code to implement the authentication and authorization requirements for a Web app", "group": "Web App", "type": "stop" },
+                              { "name": "W6", "description": "Develops code for implementing data access and managing data sources, including cloud data services and storage", "group": "Web App", "type": "stop" },
+                              { "name": "W7", "description": "Develops a Web app that supports  user interactions, input and validation, and security requirements", "group": "Web App", "type": "stop" },
+                              { "name": "W8", "description": "Tests, debugs, deploys, and maintains a Web app", "group": "Web App", "type": "stop" },
+                              { "name": "W9", "description": "Silver Badge", "group": "Web App", "type": "badge", "label": "Entry-Level Web App Developer" },
+                              { "name": "W10", "description": "Designs the app architecture and establishes detailed performance goals for an app", "group": "Web App", "type": "stop" },
+                              { "name": "W11", "description": "Develops test requirements and writes automated test code in accordance with source management requirements", "group": "Web App", "type": "stop" },
+                              { "name": "W12", "description": "Integrating Cloud Cache and API management", "group": "Web App", "type": "stop" },
+                              { "name": "W13", "description": "Integrating Cloud Mobile Services", "group": "Web App", "type": "stop" },
+                              { "name": "W14", "description": "ALM and Managing Cloud Services (DevOps)", "group": "Web App", "type": "stop", "fixed": true, "x": 840, "y": 120 },
+                              { "name": "S1", "description": "Develops the UI design specifications for a UAP app", "group": "Store App", "type": "stop", "fixed": true, "x": 760, "y": 240 },
+                              { "name": "S2", "description": "Develops the UI for a UAP app that supports windowing and adaptive layout as specified by UX Design", "group": "Store App", "type": "stop" },
+                              { "name": "S3", "description": "Develops the UI for a UAP app that supports user input as specified by UX Design", "group": "Store App", "type": "stop" },
+                              { "name": "S4", "description": "Develops the UI for a UAP app that supports commanding and navigation as specified by UX Design", "group": "Store App", "type": "stop" },
+                              { "name": "S5", "description": "Develops code for implementing data and file management, including cloud data services and storage", "group": "Store App", "type": "stop" },
+                              { "name": "S6", "description": "Develops code to implement authentication and app security requirements", "group": "Store App", "type": "stop" },
+                              { "name": "S7", "description": "Develops code for communicating with devices, sensors, and other apps and services", "group": "Store App", "type": "stop" },
+                              { "name": "S8", "description": "Tests, publishes, monetizes, markets, and updates a Windows Store or IoT app", "group": "Store App", "type": "stop" },
+                              { "name": "S9", "description": "Silver Badge", "group": "Store App", "type": "badge", "label": "Store App Developer", "fixed": true, "x": 80, "y": 480 },
+                              { "name": "L1", "description": "Develops the UI design specifications for a LOB app", "group": "LOB App", "type": "stop", "fixed": true, "x": 500, "y": 500 },
+                              { "name": "L2", "description": "Develops an adaptive LOB app layout using native HTML/CSS tools to achieve the specified UX Design", "group": "LOB App", "type": "stop" },
+                              { "name": "L3", "description": "Develops an adaptive LOB app layout using server-side tools to achieve the specified UX Design", "group": "LOB App", "type": "stop" },
+                              { "name": "L4", "description": "Develops client-side code and integrates JS library components to achieve the specified UX Design", "group": "LOB App", "type": "stop" },
+                              { "name": "L5", "description": "Develops code to implement the authentication and authorization requirements for a LOB app", "group": "LOB App", "type": "stop" },
+                              { "name": "L6", "description": "Develops code for implementing data access and managing data sources, including cloud data services and storage", "group": "LOB App", "type": "stop" },
+                              { "name": "L7", "description": "Develops a LOB app that supports  user interactions, input and validation, and security requirements", "group": "LOB App", "type": "stop" },
+                              { "name": "L8", "description": "Tests, debugs, deploys, and maintains a LOB app", "group": "LOB App", "type": "stop" },
+                              { "name": "L9", "description": "Silver Badge", "group": "LOB App", "type": "badge", "label": "Entry-Level LOB App Developer" },
+                              { "name": "L10", "description": "Designs the app architecture and establishes detailed performance goals for an app", "group": "LOB App", "type": "stop" },
+                              { "name": "L11", "description": "Develops test requirements and writes automated test code in accordance with source management requirements", "group": "LOB App", "type": "stop" },
+                              { "name": "L12", "description": "Integrating Cloud Cache and API management", "group": "LOB App", "type": "stop" },
+                              { "name": "L13", "description": "Integrating Cloud Mobile Services", "group": "LOB App", "type": "stop" },
+                              { "name": "L14", "description": "ALM and Managing Cloud Services (DevOps)", "group": "LOB App", "type": "stop", "fixed": true, "x": 720, "y": 20 }
+                            ],
+                            "links": [
+                              { "source": 1, "target": 0, "value": 1 },
+                              { "source": 2, "target": 1, "value": 1 },
+                              { "source": 3, "target": 2, "value": 1 },
+                              { "source": 4, "target": 3, "value": 1 },
+                              { "source": 5, "target": 4, "value": 1 },
+                              { "source": 6, "target": 5, "value": 1 },
+                              { "source": 7, "target": 6, "value": 1 },
+                              { "source": 8, "target": 7, "value": 1 },
+                              { "source": 9, "target": 8, "value": 1 },
+                              { "source": 10, "target": 9, "value": 1 },
+                              { "source": 11, "target": 10, "value": 1 },
+                              { "source": 12, "target": 11, "value": 1 },
+                              { "source": 13, "target": 12, "value": 1 },
+                              { "source": 14, "target": 13, "value": 1 },
+                              { "source": 15, "target": 14, "value": 1 },
+                              { "source": 16, "target": 11, "value": 1 },
+                              { "source": 17, "target": 16, "value": 1 },
+                              { "source": 18, "target": 17, "value": 1 },
+                              { "source": 19, "target": 18, "value": 1 },
+                              { "source": 20, "target": 19, "value": 1 },
+                              { "source": 21, "target": 6, "value": 1 },
+                              { "source": 22, "target": 21, "value": 1 },
+                              { "source": 23, "target": 22, "value": 1 },
+                              { "source": 24, "target": 23, "value": 1 },
+                              { "source": 25, "target": 24, "value": 1 },
+                              { "source": 26, "target": 25, "value": 1 },
+                              { "source": 27, "target": 26, "value": 1 },
+                              { "source": 28, "target": 27, "value": 1 },
+                              { "source": 29, "target": 28, "value": 1 },
+                              { "source": 30, "target": 6, "value": 1 },
+                              { "source": 31, "target": 30, "value": 1 },
+                              { "source": 32, "target": 31, "value": 1 },
+                              { "source": 33, "target": 32, "value": 1 },
+                              { "source": 34, "target": 33, "value": 1 },
+                              { "source": 35, "target": 34, "value": 1 },
+                              { "source": 36, "target": 35, "value": 1 },
+                              { "source": 37, "target": 36, "value": 1 },
+                              { "source": 38, "target": 37, "value": 1 },
+                              { "source": 39, "target": 38, "value": 1 },
+                              { "source": 40, "target": 39, "value": 1 },
+                              { "source": 41, "target": 40, "value": 1 },
+                              { "source": 42, "target": 41, "value": 1 },
+                              { "source": 43, "target": 42, "value": 1 }//,
+                          //    {"source":11,"target":4,"value":1},
+                          //    {"source":24,"target":34,"value":1},
+                          //    {"source":30,"target":4,"value":1},
+                          //    {"source":27,"target":14,"value":1}
+                            ]
+                        }
+
+
+                    </script>
+                    <script src="js/subway2.js"></script>
+
+                </div>
+
+            </div>
+        </div>
+
+        <footer>
+            <p class="help-block">© Crank211 2015 - Daren May - <a href="http://crank211.com" target="_blank">crank211.com</a></p>
+        </footer>
+
+    </div><!-- /.container-fluid -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            // toggle search field height
+            $('#more-options').click(function () {
+                var el = $('.fields-wrap'),
+                curHeight = el.height(),
+                autoHeight = el.css('height', 'auto').height();
+                el.height(curHeight).animate({
+                    height: autoHeight == curHeight ? "60px" : autoHeight
+                }, 300);
+            });
+        });
+
+    </script>
+
+    <div class="modal lex-modal fade" id="lexModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Stop Preview</h4>
+                </div>
+                <div class="modal-body">
+                    <span class="badge">C#</span>
+                    <span class="badge">Visual Studio</span>
+                    <img src="http://dummyimage.com/600x400/e5e5e5/cccccc&text=+++photo+++" class="img-responsive img-margin" alt="Alternate Text" />
+                    <p>Develops an adaptive Web app layout using native HTML/CSS tools to achieve the specified UX Design</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
+                    <a href="view-stop-detail.html" class="btn btn-primary">View Stop</a>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+</body>
+
+
+
+</html>

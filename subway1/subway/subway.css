@@ -1,0 +1,35 @@
+body {
+	font: 300 100.1% "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif;
+}
+#tip{
+	position : absolute;
+	border : 1px solid gray;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	background-color : #efefa0;
+	padding : 3px;
+	z-index: 1000;
+	/* set this to create word wrap */
+	max-width: 200px;
+}
+#holder {
+	left: 0;
+	right: 0;
+	position: absolute;
+	cursor: default;
+	top: 0;
+	bottom: 0;
+	border: none;
+}
+#minimap {
+	background: rgba(255, 255, 255, 0.8);
+	right: 10px;
+	position: absolute;
+	cursor: default;
+	bottom: 10px;
+	border : 1px solid gray;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}

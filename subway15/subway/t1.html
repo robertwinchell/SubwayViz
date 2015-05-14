@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+                    <script src="js/snap.svg.js"></script>
+		<script src="js/jquery.js"></script>
+</head>
+<body>
+<svg style="width: 500px; height: 500px" id="snap"></svg>
+<script>
+	var svg = $('<svg>');
+	$('body').append(svg);
+var s = Snap(svg);
+var bigCircle = s.circle(150, 150, 100);
+var smallPath = s.path("M2em, 1.3em A0.7em, 0.7em, 0 0, 1 2.1016937570607914em, 1.3074262640159817em")
+// By default its black, lets change its attributes
+bigCircle.attr({
+    fill: "#bada55",
+    stroke: "#000",
+    strokeWidth: 5
+});
+</script>
+</body>
+
+</html>
+

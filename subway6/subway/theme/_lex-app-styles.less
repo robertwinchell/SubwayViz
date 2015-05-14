@@ -1,0 +1,284 @@
+/*------------------------------------*\
+           LEX APP STYLES 
+\*------------------------------------*/
+
+
+h1, h2, h3 {
+    font-weight:100;
+}
+
+.lex-hdr {
+
+    margin: 20px 0;
+
+    .icon-bar {
+        background:@brand-primary;
+    }
+
+}
+
+
+.lex-hero {
+    background: url(img/hero-temp.jpg)no-repeat;
+    background-color:#ebeff2;
+}
+
+.hdr-border {
+	
+	border-bottom: 5px solid #eee;
+	margin: 0 auto 20px auto;
+    width:100%;
+}
+
+.default {
+
+	.hdr-border {
+		max-width:1600px;
+	}
+
+	.m-header {
+		margin:0 auto 10px auto;
+		display:block;
+	}
+
+}
+
+.map {
+
+    .pg-title {
+        font-size:24px;
+        margin:4px 0 10px 0;
+    }
+
+    .lex-hdr {
+        margin:0px;
+    }
+
+}
+
+.lex-panels {
+
+      border: 0px solid transparent;
+    
+    a {
+
+        .link-panel {
+        display:block;
+        }
+
+        &:hover, &:focus {
+            text-decoration:none;
+            
+            .panel-heading,
+            .panel-body {
+                background:@link-hover-color;
+            }
+        }
+
+    }
+
+    .panel-heading {
+        font-weight:bold;
+        padding: 10px 15px 0 15px;
+        font-size:16px;
+        border-bottom: 0px solid transparent;
+    }
+
+    .panel-body {
+        background:@brand-primary;
+        color:#fff;
+    }
+
+}
+
+footer {
+    margin:40px 0 100px 0;
+    border-top:2px dotted #f6f6f6;
+    padding-top:20px;
+}     
+
+.filter-wrap {
+
+    margin-bottom: 15px;
+    border-bottom: 2px dotted #f6f6f6;
+    padding-bottom: 15px;
+
+    label {
+        color:#909090;
+        margin-bottom:2px;
+        font-size:12px;
+    }
+}
+
+.fields-wrap {
+  overflow: hidden;
+  height:60px;
+  margin-bottom: 8px;
+}
+
+.lex-modal {
+
+}
+
+.img-margin {
+    margin:10px auto;
+}
+
+.breadcrumb {
+    background:transparent;
+    padding:5px 0;
+}
+
+.title-wrap {
+  border-bottom: 2px dotted #f6f6f6;
+  padding-bottom: 10px;
+  margin-bottom:20px;
+
+  h1 {
+      margin:0px;
+  }
+
+}
+
+/*------------------------------------*\
+             Map Styling 
+\*------------------------------------*/
+
+.map-canvas,
+.map-canvas-force {
+    position:relative;
+    width:100%;
+    display:block;
+    border:1px solid #f6f6f6;
+    overflow:hidden;
+}
+
+.map-canvas-force {
+
+    text-align:center;
+
+}
+
+
+.tip-style{
+	position : absolute;
+	border : 1px solid gray;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	background-color : #efefa0;
+	padding : 3px;
+	z-index: 1000;
+	/* set this to create word wrap */
+	max-width: 200px;
+}
+
+.minimap-style {
+	background: rgba(255, 255, 255, 0.8);
+	right: 10px;
+	position: absolute;
+	cursor: default;
+	bottom: 10px;
+	border : 1px solid gray;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+
+@media only screen and (min-width: 1300px) {
+    .hidden-xl {
+        display:none;
+    }
+}
+
+@media (min-width: 1200px) {
+
+	.container {
+		width:916px;
+	}
+
+    .lex-hero {
+        background-position:275px -24px;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+    .lex-hero {
+        background-position:75px -24px;
+    }
+
+    .map-canvas,
+    .map-canvas-force {
+        max-height:600px;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+	.lex-panels {
+		
+        .panel-body {
+            min-height: 130px;
+        }
+
+	}
+
+    .map-canvas,
+    .map-canvas-force {
+        height:600px;
+
+        h3.map-label {
+            line-height:600px;
+        }
+    }
+
+}
+
+@media (max-width: 767px) {
+
+
+
+}
+
+@media (min-width: 451px) and (max-width: 767px){
+
+       .map-canvas,
+       .map-canvas-force {
+        height:450px;
+
+        h3.map-label {
+            line-height:450px;
+        }
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .lex-modal {
+
+        .modal-dialog {
+            margin:0px;
+        }
+
+    }
+
+   .map-canvas,
+   .map-canvas-force {
+        height:250px;
+
+        h3.map-label {
+            line-height:250px;
+        }
+    }
+
+
+}
+
+
+  

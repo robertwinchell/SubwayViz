@@ -1,0 +1,81 @@
+{
+    "name": "strategic planning",
+    "children": [
+        {
+            "name": "Strategy",
+            "children": [
+                {
+                    "name": "ITEC Practice",
+                    "children": [
+                        {"name": "Delivering Business Strategy Management Practices", "size": 12, "worktype": "core"},
+                        {"name": "Developing IT Business Management Practices", "size": 20, "worktype": "dev"}
+                    ]
+                },
+                {
+                    "name": "ITEC Tools",
+                    "children": [
+                        {"name": "Delivering Business Strategy Management Tools", "size": 1, "worktype": "gov"},
+                        {"name": "Developing IT Business Management Tools", "size": 0.4, "worktype": "core"}
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Planning",
+            "children": [
+                {
+                    "name": "ITEC Practice",
+                    "children": [
+                        {"name": "1 planning Practice L2", "size": 2, "worktype": "dev"},
+                        {"name": "2 planning Practice L2", "size": 5, "worktype": "core"}
+                    ]
+                },
+                {
+                    "name": "ITEC Tools",
+                    "children": [
+                        {"name": "1 planning tools L2", "size": 2, "worktype": "gov"},
+                        {"name": "2 planning tools L2", "size": 5, "worktype": "dev"}
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Delivery",
+            "children": [
+                {
+                    "name": "ITEC Practice",
+                    "children": [
+                        {"name": "1 delivery Practice L2", "size": 1, "worktype": "dev"},
+                        {"name": "2 delivery Practice L2", "size": 3, "worktype": "core"}
+                    ]
+                },
+                {
+                    "name": "ITEC Tools",
+                    "children": [
+                        {"name": "1 delivery tools L2", "size": 4, "worktype": "gov"},
+                        {"name": "2 delivery tools L2", "size": 2, "worktype": "dev"}
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Value Realization",
+            "children": [
+                {
+                    "name": "ITEC Practice",
+                    "children": [
+                        {"name": "1 value Practice L2", "size": 4, "worktype": "gov"},
+                        {"name": "2 value Practice L2", "size": 3, "worktype": "core"}
+                    ]
+                },
+                {
+                    "name": "ITEC Tools",
+                    "children": [
+                        {"name": "1 value tools L2", "size": 5, "worktype": "gov"},
+                        {"name": "2 value tools L2", "size": 1, "worktype": "dev"}
+                    ]
+                }
+            ]
+        }
+    ]
+}
