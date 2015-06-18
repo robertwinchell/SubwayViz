@@ -1,0 +1,918 @@
+{
+    "LexDiagramDtoId": 5,
+    "LCID": 1033,
+    "DiagramName": "Data Platform Learning Paths",
+    "DiagramDescription": "Data Platform Learning Paths",
+    "CreatedBy": "rob.collins@crank211.com",
+    "CreatedAt": "2015-05-26T01:09:47",
+    "ModifiedBy": "rob.collins@crank211.com",
+    "ModifiedAt": "2015-05-26T01:09:47",
+    "DiagramNodes": [
+        {
+            "DiagramNodeId": 85,
+            "ParentDiagramNodeId": null,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "StartNode",
+            "NodeTitle": "Database Fundamentals",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": 1,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 72,
+                    "StartDiagramNodeId": 85,
+                    "EndDiagramNodeId": 86,
+                    "ConnectorHexColor": "#000000",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 86,
+            "ParentDiagramNodeId": 85,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Cloud Service Fundamentals for Data",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": 2,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 73,
+                    "StartDiagramNodeId": 86,
+                    "EndDiagramNodeId": 87,
+                    "ConnectorHexColor": "#000000",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 87,
+            "ParentDiagramNodeId": 86,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Query Data using Transact-SQL",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": 3,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 74,
+                    "StartDiagramNodeId": 87,
+                    "EndDiagramNodeId": 88,
+                    "ConnectorHexColor": "#663399",
+                    "ConnectorTitle": "Data Platform Fundamentals",
+                    "DiagramConnectorType": "Basic"
+                },
+                {
+                    "DiagramConnectorId": 79,
+                    "StartDiagramNodeId": 87,
+                    "EndDiagramNodeId": 93,
+                    "ConnectorHexColor": "#ADD8E6",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                },
+                {
+                    "DiagramConnectorId": 88,
+                    "StartDiagramNodeId": 87,
+                    "EndDiagramNodeId": 102,
+                    "ConnectorHexColor": "#FFA500",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 88,
+            "ParentDiagramNodeId": 87,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Develop Relational Databases",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": 4,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 75,
+                    "StartDiagramNodeId": 88,
+                    "EndDiagramNodeId": 89,
+                    "ConnectorHexColor": "#663399",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 89,
+            "ParentDiagramNodeId": 88,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Develop Data Access Clients",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": 5,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 76,
+                    "StartDiagramNodeId": 89,
+                    "EndDiagramNodeId": 90,
+                    "ConnectorHexColor": "#663399",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 90,
+            "ParentDiagramNodeId": 89,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Performance Tune and Optimize Relational Databases",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": 6,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 77,
+                    "StartDiagramNodeId": 90,
+                    "EndDiagramNodeId": 91,
+                    "ConnectorHexColor": "#663399",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 91,
+            "ParentDiagramNodeId": 90,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Develop non-Relational Databases",
+            "NodeText": null,
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": 7,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 78,
+                    "StartDiagramNodeId": 91,
+                    "EndDiagramNodeId": 92,
+                    "ConnectorHexColor": "#663399",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 92,
+            "ParentDiagramNodeId": 91,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "EndNodeBadge",
+            "NodeTitle": "Database Application Development",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": null,
+            "NodeHexColor": "#663399",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 93,
+            "ParentDiagramNodeId": 87,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Infrastructure Fundamentals",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": 8,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 80,
+                    "StartDiagramNodeId": 93,
+                    "EndDiagramNodeId": 94,
+                    "ConnectorHexColor": "#ADD8E6",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 94,
+            "ParentDiagramNodeId": 93,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Deploy a Database Management System (DBMS)",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": 9,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 81,
+                    "StartDiagramNodeId": 94,
+                    "EndDiagramNodeId": 95,
+                    "ConnectorHexColor": "#ADD8E6",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 95,
+            "ParentDiagramNodeId": 94,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Manage DBMS Security",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": 10,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 82,
+                    "StartDiagramNodeId": 95,
+                    "EndDiagramNodeId": 96,
+                    "ConnectorHexColor": "#ADD8E6",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 96,
+            "ParentDiagramNodeId": 95,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Manage DBMS Data Recovery",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": 11,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 83,
+                    "StartDiagramNodeId": 96,
+                    "EndDiagramNodeId": 97,
+                    "ConnectorHexColor": "#ADD8E6",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 97,
+            "ParentDiagramNodeId": 96,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Manage Database Operations",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": 12,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 84,
+                    "StartDiagramNodeId": 97,
+                    "EndDiagramNodeId": 98,
+                    "ConnectorHexColor": "#ADD8E6",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 98,
+            "ParentDiagramNodeId": 97,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Monitor and Manage DBMS Health",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": 13,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 85,
+                    "StartDiagramNodeId": 98,
+                    "EndDiagramNodeId": 99,
+                    "ConnectorHexColor": "#ADD8E6",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 99,
+            "ParentDiagramNodeId": 98,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Implement DBMS High Availability",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": 14,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 86,
+                    "StartDiagramNodeId": 99,
+                    "EndDiagramNodeId": 100,
+                    "ConnectorHexColor": "#ADD8E6",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 100,
+            "ParentDiagramNodeId": 99,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Implement Database Replication",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": 15,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 87,
+                    "StartDiagramNodeId": 100,
+                    "EndDiagramNodeId": 101,
+                    "ConnectorHexColor": "#ADD8E6",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 101,
+            "ParentDiagramNodeId": 100,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "EndNodeBadge",
+            "NodeTitle": "Database Administration",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": null,
+            "NodeHexColor": "#ADD8E6",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 102,
+            "ParentDiagramNodeId": 87,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Analyze and Visualize Data",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": 16,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 89,
+                    "StartDiagramNodeId": 102,
+                    "EndDiagramNodeId": 103,
+                    "ConnectorHexColor": "#FFA500",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                },
+                {
+                    "DiagramConnectorId": 98,
+                    "StartDiagramNodeId": 102,
+                    "EndDiagramNodeId": 112,
+                    "ConnectorHexColor": "#FFA500",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 103,
+            "ParentDiagramNodeId": 102,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Implement Data Warehouses",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": 17,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 90,
+                    "StartDiagramNodeId": 103,
+                    "EndDiagramNodeId": 104,
+                    "ConnectorHexColor": "#FFA500",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 104,
+            "ParentDiagramNodeId": 103,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Collect Data using ETL",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": 18,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 91,
+                    "StartDiagramNodeId": 104,
+                    "EndDiagramNodeId": 105,
+                    "ConnectorHexColor": "#FFA500",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 105,
+            "ParentDiagramNodeId": 104,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Manage Data Quality using MDS and DQS",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": 19,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 92,
+                    "StartDiagramNodeId": 105,
+                    "EndDiagramNodeId": 106,
+                    "ConnectorHexColor": "#FFA500",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 106,
+            "ParentDiagramNodeId": 105,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Implement Data Models",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": 20,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 93,
+                    "StartDiagramNodeId": 106,
+                    "EndDiagramNodeId": 107,
+                    "ConnectorHexColor": "#FFA500",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 107,
+            "ParentDiagramNodeId": 106,
+            "SecondaryParentDiagramNodeId": 115,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Implement a Big Data Solution with APS",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": null,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 94,
+                    "StartDiagramNodeId": 107,
+                    "EndDiagramNodeId": 108,
+                    "ConnectorHexColor": "#FFA500",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 108,
+            "ParentDiagramNodeId": 107,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Implement a Cloud Data Warehouse with Azure SQL Data Warehouse",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": null,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 95,
+                    "StartDiagramNodeId": 108,
+                    "EndDiagramNodeId": 109,
+                    "ConnectorHexColor": "#FFA500",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 109,
+            "ParentDiagramNodeId": 108,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Implement Reporting",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": 21,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 96,
+                    "StartDiagramNodeId": 109,
+                    "EndDiagramNodeId": 110,
+                    "ConnectorHexColor": "#FFA500",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 110,
+            "ParentDiagramNodeId": 109,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Deliver Self-Service BI",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": 22,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 97,
+                    "StartDiagramNodeId": 110,
+                    "EndDiagramNodeId": 111,
+                    "ConnectorHexColor": "#FFA500",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 111,
+            "ParentDiagramNodeId": 110,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "EndNodeBadge",
+            "NodeTitle": "Enterprise BI Development",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": null,
+            "NodeHexColor": "#FFA500",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 99,
+                    "StartDiagramNodeId": 111,
+                    "EndDiagramNodeId": 113,
+                    "ConnectorHexColor": "#00008B",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 112,
+            "ParentDiagramNodeId": 102,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Understand Cloud Service Fundamentals for Advanced Analytics",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": 23,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 113,
+            "ParentDiagramNodeId": 111,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Analyze Big Data using Cloud Services",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": 24,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 100,
+                    "StartDiagramNodeId": 113,
+                    "EndDiagramNodeId": 114,
+                    "ConnectorHexColor": "#00008B",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 114,
+            "ParentDiagramNodeId": 113,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Orchestrate Cloud Data",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": 25,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 101,
+                    "StartDiagramNodeId": 114,
+                    "EndDiagramNodeId": 115,
+                    "ConnectorHexColor": "#00008B",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 115,
+            "ParentDiagramNodeId": 114,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Perform Predictive Analysis using Machine Learning",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": 26,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 102,
+                    "StartDiagramNodeId": 115,
+                    "EndDiagramNodeId": 107,
+                    "ConnectorHexColor": "#00008B",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                },
+                {
+                    "DiagramConnectorId": 103,
+                    "StartDiagramNodeId": 115,
+                    "EndDiagramNodeId": 116,
+                    "ConnectorHexColor": "#00008B",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 116,
+            "ParentDiagramNodeId": 115,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Analyze Real-time Data using Cloud Services",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": 27,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 104,
+                    "StartDiagramNodeId": 116,
+                    "EndDiagramNodeId": 117,
+                    "ConnectorHexColor": "#00008B",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 117,
+            "ParentDiagramNodeId": 116,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Implement a Cloud Data Directory",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": 28,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 105,
+                    "StartDiagramNodeId": 117,
+                    "EndDiagramNodeId": 118,
+                    "ConnectorHexColor": "#00008B",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 118,
+            "ParentDiagramNodeId": 117,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "Basic",
+            "NodeTitle": "Integrate Cloud Data Analytics Solutions",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": 29,
+            "NodeHexColor": "#000000",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [
+                {
+                    "DiagramConnectorId": 106,
+                    "StartDiagramNodeId": 118,
+                    "EndDiagramNodeId": 119,
+                    "ConnectorHexColor": "#00008B",
+                    "ConnectorTitle": null,
+                    "DiagramConnectorType": "Basic"
+                }
+            ],
+            "ChildGroup": null,
+            "Connected": false
+        },
+        {
+            "DiagramNodeId": 119,
+            "ParentDiagramNodeId": 118,
+            "SecondaryParentDiagramNodeId": null,
+            "DiagramNodeType": "EndNodeBadge",
+            "NodeTitle": "Advanced Analytics",
+            "NodeText": "",
+            "DurationInHours": null,
+            "ChildNodeGroupId": null,
+            "ParentNodeGroupId": null,
+            "NodeTickValue": null,
+            "NodeHexColor": "#00008B",
+            "DiagramNodeDetailPageId": null,
+            "DiagramConnectorDtos": [],
+            "ChildGroup": null,
+            "Connected": false
+        }
+    ]
+}
