@@ -1,0 +1,513 @@
+﻿@model Quiz.Web.Models.HomeModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@section featured {
+    <section class="featured">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3" id="dv">
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+<script src="@Url.Content("~/Scripts/jquery-1.8.2.js")"></script>
+<script src="@Url.Content("~/Scripts/jquery-1.10.2.min.js")"></script>
+<script src="@Url.Content("~/dynamicfolder/QuestionData.js")"></script>
+<script src="@Url.Content("~/dynamicfolder/survey.js")"></script>
+
+<script type="text/javascript">
+    var count = 0;
+    var shownum = 0;
+    var QuestionAnswer = [];
+    var uemail;
+    var uID;
+    var isImage = false;
+    //Pull the questions text and images from the JSON
+    $.getJSON("/dynamicfolder/QuestionData.js", function (data) {
+
+
+        var items = [];
+        var dv = document.getElementById("dv");
+        //Put questions into a list to navigate from
+        $.each(data, function (key, val1) {
+
+            items.push(val1);
+        });
+
+        var length = items.length - 1;
+        QuestionAnswer = items;
+
+        //traverse the list
+        for (var cc = 0; cc < items.length; cc++) {
+
+            //check for the landing page and inject the attributes
+            if (count == cc) {
+                var ul = document.createElement('div');
+                ul.setAttribute("id", 'ul' + cc);
+                var a1 = document.createElement('a');
+                a1.setAttribute("class", "toc-anchor");
+                a1.setAttribute("name", "what-do-you-know-about-the-news");
+                ul.appendChild(a1);
+
+                var a2 = document.createElement('a');
+                a2.setAttribute("class", "toc-anchor");
+                a2.setAttribute("name", "toc-anchor-269224-1");
+                ul.appendChild(a2);
+
+                var h = document.createElement('h2');
+                var question = document.createTextNode(items[cc].question);
+                var img = document.createElement('img');
+                var image = items[cc].image;
+                //check for an image in the JSON, set from the filesys
+                if (image != "") {
+                    img.setAttribute("src", '/Content/QuizImage/' + image);
+                    img.setAttribute("class", "survey-image");
+                    img.setAttribute("alt", "Generic Survey Title");
+                    h.appendChild(img);
+                }
+                h.appendChild(question);
+                ul.appendChild(h);
+                var lianswer = document.createElement('div');
+                var type = items[cc].type;
+                var options = items[cc].options;
+                var opsplit = options.split('--');
+                for (var k = 0; k < opsplit.length; k++) {
+                    var p = document.createElement('p');
+                    var options = document.createTextNode(opsplit[k]);
+                    p.appendChild(options);
+                    lianswer.appendChild(p);
+                }
+
+                ul.appendChild(lianswer);
+                dv.appendChild(ul);
+
+                var txt = document.createElement('input');
+                txt.setAttribute("type", "text");
+                txt.setAttribute("id", "txtemail");
+                txt.setAttribute("class", "email-entry");
+                txt.setAttribute("placeholder", "Email");
+                lianswer.appendChild(txt);
+
+                var spnemail = document.createElement('span');
+                spnemail.setAttribute("id", "spnemail");
+                var spntxt = document.createTextNode("");
+                spnemail.appendChild(spntxt);
+                lianswer.appendChild(spnemail);
+
+                var button = document.createElement('button');
+                var op = document.createTextNode("Begin Quiz ");
+                button.appendChild(op);
+                button.setAttribute("id", 'btn' + cc);
+                button.setAttribute("class", "begin-button");
+                button.setAttribute("type", "button");
+                button.setAttribute("onclick", "ShowNextQuestion(" + cc + ")");
+                lianswer.appendChild(button);
+
+                ul.appendChild(lianswer);
+                dv.appendChild(ul);
+            }
+            else if (cc == length) {
+                var ul = document.createElement('div');
+                ul.setAttribute("id", 'ul' + cc);
+                ul.setAttribute("style", "display:none;");
+                var h1 = document.createElement('h1');
+                var title = document.createTextNode(items[cc].question);
+                h1.appendChild(title);
+                ul.appendChild(h1);
+                var lianswer = document.createElement('div');
+                lianswer.setAttribute("id", 'li' + cc);
+
+                var dvscore = document.createElement('p');
+                dvscore.setAttribute("id", "spnresult");
+                lianswer.appendChild(dvscore);
+
+                var scorefootnote1 = document.createElement('p');
+                var scoretext1 = document.createTextNode(items[cc].image);
+                scorefootnote1.appendChild(scoretext1);
+                lianswer.appendChild(scorefootnote1);
+
+                var scorefootnote2 = document.createElement('p');
+                var scoretext2 = document.createTextNode(items[cc].type);
+                scorefootnote2.appendChild(scoretext2);
+                lianswer.appendChild(scorefootnote2);
+
+                ul.appendChild(lianswer);
+                dv.appendChild(ul);
+            }
+            else {
+                var questionid = cc;
+                var ul = document.createElement('div');
+                ul.setAttribute("id", 'ul' + cc);
+                ul.setAttribute("class", "survey-question");
+                ul.setAttribute("style", "display:none;");
+                var total = items.length - 2;
+                var label = document.createElement('div')
+                label.setAttribute("id", 'label' + cc);
+                var op = document.createTextNode("Question " + shownum + " of " + total);
+                label.appendChild(op);
+                ul.appendChild(label);
+
+                var lititle = document.createElement('div');
+                var question = document.createTextNode(items[cc].question);
+                lititle.appendChild(question);
+                lititle.setAttribute("class", "question-text");
+                ul.appendChild(lititle);
+
+                var img = document.createElement('img');
+                var image = items[cc].image;
+                if (image != "") {
+                    img.setAttribute("src", '/Content/QuizImage/' + image);
+                    img.setAttribute("class", "survey-image");
+                    ul.appendChild(img);
+                }
+
+                var lianswer = document.createElement('div');
+                lianswer.setAttribute("id", 'li' + cc);
+                lianswer.setAttribute("class", "answer-options");
+                var type = items[cc].type;
+                var options = items[cc].options;
+                var correctAnswer = items[cc].correctAnswer;
+                var opsplit = options.split(',');
+                if (type == "multiple choice") {
+                    for (var k = 0; k < opsplit.length; k++) {
+
+                        label = document.createElement('label');
+                        var chkbx = document.createElement('input');
+                        chkbx.setAttribute("type", "checkbox");
+                        chkbx.setAttribute("id", "check" + cc + k);
+                        chkbx.name = k;
+                        chkbx.value = opsplit[k];
+                        label.setAttribute("class", "check-label");
+                        label.setAttribute("for", chkbx.id);
+                        label.appendChild(document.createTextNode(opsplit[k]));
+                        lianswer.appendChild(chkbx);
+                        lianswer.appendChild(label);
+                    }
+                }
+                    //Check for the question type according to the JSON, display the proper styles
+                else if (type == "radio buttons") {
+                    for (var k = 0; k < opsplit.length; k++) {
+
+                        label = document.createElement('label');
+                        var rdb = document.createElement('input');
+                        rdb.setAttribute("id", "radio" + cc + k);
+                        label.setAttribute("class", "radio-label");
+                        label.setAttribute("for", rdb.id);
+                        rdb.setAttribute("type", "radio");
+                        rdb.name = "radioquestion";
+                        rdb.value = opsplit[k];
+                        label.appendChild(document.createTextNode(opsplit[k]));
+                        lianswer.appendChild(rdb);
+                        lianswer.appendChild(label);
+                    }
+                }
+                else if (type == "image") {
+                    //upimage = this;
+                    var file = document.createElement('input');
+                    file.setAttribute("id", 'file' + cc);
+                    file.setAttribute("class", "file-input");
+                    file.setAttribute("type", "file");
+                    file.setAttribute("onchange", "filesave(this);");
+                    var op = document.createTextNode(options);
+                    file.appendChild(op);
+                    lianswer.appendChild(file);
+                    //var img = document.createElement('img');
+                    //img.setAttribute("src", "");
+                    //img.setAttribute("id", 'img' + cc);
+                    //img.setAttribute("style", "width: 40px;height: 35px; margin-top: -30px;margin-left:200px;display: none;");
+                    lianswer.appendChild(img);
+
+                    var spnimg = document.createElement('span');
+                    spnimg.setAttribute("id", "spnimg");
+                    var spntxt = document.createTextNode("");
+                    spnimg.appendChild(spntxt);
+                    lianswer.appendChild(spnimg);
+
+                }
+                else {
+                    var txt = document.createElement('textarea');
+                    txt.setAttribute("row", "7");
+                    txt.setAttribute("cols", "63");
+                    txt.setAttribute("maxlength", "150");
+                    txt.setAttribute("placeholder", "Free text input");
+                    txt.setAttribute("class", "free-text");
+                    var op = document.createTextNode(options);
+                    txt.appendChild(op);
+                    lianswer.appendChild(txt);
+                }
+                var button = document.createElement('button')
+                //Check whether the next item in the list is the last, if so it is the final page and the button goes to the 
+                //final page
+                if (shownum == total) {
+                    var op = document.createTextNode("Get Result");
+                    button.appendChild(op);
+                    button.setAttribute("id", 'btn' + cc);
+                    button.setAttribute("class", "result-button");
+                    button.setAttribute("type", "button");
+                    button.setAttribute("onclick", "GetResult(" + cc + ")");
+                    lianswer.appendChild(button);
+                    ul.appendChild(lianswer);
+                    ul.appendChild(lianswer);
+                    dv.appendChild(ul);
+                }
+                    //Otherwise go to next question
+                else {
+                    var op = document.createTextNode("Next question");
+                    button.appendChild(op);
+                    button.setAttribute("id", 'btn' + cc);
+                    button.setAttribute("class", "next-button");
+                    button.setAttribute("type", "button");
+                    button.setAttribute("onclick", "ShowNextQuestion(" + cc + ")");
+                    lianswer.appendChild(button);
+                    ul.appendChild(lianswer);
+                    dv.appendChild(ul);
+                }
+
+            }
+            shownum++;
+        }
+    });
+
+    var userid = "";
+    var useremail = "";
+    //This is the function that navigates between the pages
+    //It also checks if the first page has a valid email and call the REST service to insert the user to the DB
+    function ShowNextQuestion(val) {
+
+        if (userid != "" && val != 0) {
+            //start saveanswer
+            var dvchild = "";
+            var child = "";
+            var answer = "";
+            var dvli = document.getElementById('li' + val);
+            child = dvli.getElementsByTagName('input');
+
+            if (child.length == 0) {
+                child = dvli.getElementsByTagName('textarea');
+                answer = child[0].value;
+            }
+            else if (child.length == 1) {
+                answer = child[0].value;
+            }
+            else {
+                for (var k = 0; k < child.length; k++) {
+                    if (child[k].type == "checkbox" || child[0].type == "radio") {
+                        if (child[k].checked == true) {
+                            answer = child[k].value;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            var ul = document.getElementById('ul' + val);
+            ul.style.display = "none";
+            var valnw = val + 1;
+            var ulnw = document.getElementById('ul' + valnw);
+            ulnw.style.display = "block";
+
+        }
+        else {
+            //regex to check the email format
+            var chkemail = /^([\w-]+(?:\.[\w-]+)*)@@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+           
+            var email = document.getElementById("txtemail").value;
+            var ret = chkemail.test(email);
+
+            if (ret == true) {
+
+                var formData = new FormData();
+                formData.append("Email", email);
+                var data = new Object();
+                data.Email = email;
+                uemail = email;
+                //REST service to insert email to DB
+                $.ajax({
+                    url: "/api/user",
+                    type: "POST",
+                    dataType: "json",
+                    data: data,
+                    success: function (results) {
+
+                        if (results.ID != null) {
+                            uID = results.ID;
+                        }
+                        userid = data;
+                        useremail = email;
+                        var ul = document.getElementById('ul' + val);
+                        ul.style.display = "none";
+                        var valnw = val + 1;
+                        var ulnw = document.getElementById('ul' + valnw);
+                        ulnw.style.display = "block";
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        if (errorThrown == 'Conflict' && textStatus == 'error') {
+                            document.getElementById("spnemail").innerHTML = "That email is already in use";
+                        } else {
+                            window.open("/home/error?message=" + errorThrown, "_self");
+                        }
+                    }
+                });
+            }
+
+            else {
+                //alert("Please use valid format.");
+                document.getElementById("spnemail").innerHTML = "Please use valid format.";
+            }
+        }
+    }
+    var result = "";
+    var bettermarks = "";
+    var belowmarks = "";
+    var scoremarks = "";
+    //Function called at the end of the quiz, sends the confrmation email message and displays the JSON text
+    function GetResult(val) {
+
+            if (isImage) {
+
+                if (userid != "") {
+                    if (val != 0) {
+                        //start saveanswer
+
+                            document.getElementById("spnimg").innerHTML = "";
+                   
+                            var id = "";
+                            var AnswerList = [];
+
+                            var ul = document.getElementById('ul' + val);
+                            ul.style.display = "none";
+                            var valnw = val + 1;
+                            var ulnw = document.getElementById('ul' + valnw);
+                            ulnw.style.display = "block";
+
+                            var formData = new FormData();                           
+
+                            //send email
+                            var msg = 'Thanks for participating!';
+                            formData = new FormData();
+                            formData.append("UserEmail", useremail);
+                            formData.append("Userid", userid);
+                            formData.append("Message", msg);
+
+                            $.ajax({
+                            url: '@Url.Content("~/Home/SendMessage")',
+                            dataType: 'json',
+                            type: 'POST',
+                            data: formData,
+                            contentType: false,
+                            processData: false,
+
+                            success: function (data) {
+                                          
+                            },
+                            error: function (jqXHR, textStatus, errorThrown) {
+                                window.open("/home/error?message=" + errorThrown, "_self");
+                            }
+                        });           
+                    
+                    }
+                    else {
+                        document.getElementById("spnimg").innerHTML = "Please upload an image of type jpg, png, or bmp.";
+                    }
+
+
+            }
+        }
+        else {
+            document.getElementById("spnimg").innerHTML = "Please upload only an image of type jpeg, png, or bmp";
+        }
+       
+        
+    }
+
+    //Save the image file to the filesys
+    function filesave(e) {
+
+        var formData = new FormData();
+        var totalFiles = document.getElementById(e.id).files.length;
+        var file = document.getElementById(e.id).files[0];
+        var id = e.id;
+        var rowid = id.substr(4);
+
+        var lastpart = e.value;
+        //remove everything before the name
+        var alphabet = lastpart;
+        var imagepath = alphabet.replace(/^.+fakepath/, '');
+
+        var extention = lastpart.split('.');
+        var imagetype = extention[extention.length - 1];
+
+        //validate image type
+        if (imagetype == "jpeg" || imagetype == "jpg" || imagetype == "png" || imagetype == "bmp") {
+
+            //add GUID to image name to keep it unique
+            guid = (S4() + S4() + "-" + S4() + "-4" + S4().substr(0, 3) + "-" + S4() + "-" + S4() + S4() + S4()).toLowerCase();
+
+            document.getElementById("spnimg").innerHTML = "";
+            isImage = true;
+            imagepath = guid + imagepath;
+
+            var data = new Object();
+            data.ID = uID;
+            data.Email = uemail;
+            data.Image = imagepath;
+            data.Completed = true;
+            //REST service to update DB to show the user completed the survey and the image name
+            $.ajax({
+                url: "/api/user/" + uID,
+                type: "PUT",
+                dataType: "json",
+                data: data,
+                success: function (results) {
+
+                    var row = document.getElementById("li" + rowid);
+                    var img = row.getElementsByTagName("img");
+                    //img[0].src = '/dynamicfolder/UserAnswerImage/' + results;
+                    //img[0].style.display = "block";
+
+
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                        window.open("/home/error?message=" + errorThrown, "_self");
+                }
+            });
+
+            document.getElementById("spnimg").innerHTML = "";
+            formData.append("Userid", userid);
+            formData.append("totalfile", totalFiles);
+            formData.append("FileUpload", file);
+            formData.append("Useremail", useremail);
+            //REST service to save the uploaded image to the filesys
+            $.ajax({
+                url: '@Url.Content("~/Home/Upload")',
+                dataType: 'json',
+                type: 'POST',
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: function (data) {
+                    var row = document.getElementById("li" + rowid);
+                    var img = row.getElementsByTagName("img");
+                    img[0].src = '/dynamicfolder/UserAnswerImage/' + data;
+                    img[0].style.display = "block";
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    window.open("/home/error?message=" + errorThrown, "_self");
+                }
+            });
+        }
+        else {
+            document.getElementById("spnimg").innerHTML = "Please upload only an image of type jpeg, png, or bmp";
+        }
+    }
+    function S4() {
+        return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+    }
+</script>
